@@ -1,0 +1,122 @@
+<div class="app">
+
+  <!-- NAV -->
+  <div class="nav">
+    <button onclick="showPage('home')">🏠 Home</button>
+    <button onclick="showPage('learn')">📘 Learn</button>
+    <button onclick="showPage('track')">💧 Track</button>
+    <button onclick="showPage('flashcards')">🧠 Flashcards</button>
+    <button onclick="showPage('quiz')">🎮 Play</button>
+  </div>
+
+  <!-- HOME -->
+  <div id="home" class="page">
+    <h1>💧 Bladder Buddy</h1>
+    <p>Let’s keep your bladder healthy!</p>
+  </div>
+
+  <!-- LEARN -->
+  <div id="learn" class="page hidden">
+    <h2>📘 Bladder Health Guide</h2>
+
+    <div class="accordion" onclick="toggleAccordion(this)">
+      💡 What is Bladder Health?
+      <div class="content">
+        Bladder health means your urinary system is working well to:
+        <ul>
+          <li>✔ Store urine properly</li>
+          <li>✔ Empty regularly</li>
+          <li>✔ Prevent infections</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="accordion" onclick="toggleAccordion(this)">
+      ⚠️ Common Problems (LUTS)
+      <div class="content">
+        <ul>
+          <li>🔥 Pain when urinating</li>
+          <li>🚨 Urgency</li>
+          <li>💧 Frequent urination</li>
+          <li>🦠 Urinary Track Infection</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="accordion" onclick="toggleAccordion(this)">
+      🚫 Why Adolescents at Risk?
+      <div class="content">
+        <ul>
+          <li>❌ Not drinking enough water</li>
+          <li>❌ Holding urine in class</li>
+          <li>❌ Poor hygiene</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="accordion" onclick="toggleAccordion(this)">
+      💧 Healthy Tips
+      <div class="content">
+        <ul>
+          <li>✔ Drink 6–8 glasses</li>
+          <li>✔ Don’t hold urine</li>
+          <li>✔ Go every 3–4 hours</li>
+          <li>✔ Stay clean & dry</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- TRACK -->
+  <div id="track" class="page hidden">
+    <h2>💧 Hydration Tracker</h2>
+
+    <div class="water-container">
+      <div id="water-fill"></div>
+      <p id="water">💧 0 / 8</p>
+    </div>
+
+    <p id="message"></p>
+
+    <button onclick="addWater()">➕ Drink</button>
+    <button onclick="resetWater()">🔄 Reset</button>
+  </div>
+
+  <!-- FLASHCARDS -->
+<div id="flashcards" class="page hidden">
+  <h2>🧠 Flashcards</h2>
+
+  <p id="cardCount">1/20</p>
+
+  <div class="card" onclick="flipCard()">
+    <div class="card-inner">
+      <div id="cardFront" class="card-front">Tap to flip 👆</div>
+      <div id="cardBack" class="card-back">Answer</div>
+    </div>
+  </div>
+
+  <p class="hint">Tap card to flip</p>
+
+  <div class="nav-btns">
+    <button onclick="prevFlashcard()">⬅️</button>
+    <button onclick="nextFlashcard()">➡️</button>
+  </div>
+</div>
+
+  <!-- QUIZ -->
+  <div id="quiz" class="page hidden">
+  <h2>🎮 Bladder Quiz</h2>
+
+  <p id="progress">Question 1/10</p>
+  <p id="question"></p>
+
+  <div class="answers">
+    <button id="btnA" onclick="checkAnswer('A')"></button>
+    <button id="btnB" onclick="checkAnswer('B')"></button>
+    <button id="btnC" onclick="checkAnswer('C')"></button>
+    <button id="btnD" onclick="checkAnswer('D')"></button>
+  </div>
+
+  <p id="result"></p>
+</div>
+  
